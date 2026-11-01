@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Attari’s | Doner Kebabs & Pizza, Washwood Heath Road B8</title>
+<meta name="description" content="Attari’s, 670 Washwood Heath Road, Birmingham B8 2HQ. Doner kebabs and pizza. Call 07596 794030.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff3e2; --ink:#1a1512; --muted:#6b5f55; --card:#ffffff; --line:#ecd9bf;
+  --ember:#ff5a1f; --cheese:#ffc233; --char:#14110f; --cream:#fff3e2;
+  --head:"Bricolage Grotesque","Arial Black",Impact,sans-serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1613;--ink:#fff3e2;--muted:#c2b3a3;--card:#262019;--line:#3a3028}}
+:root[data-theme="dark"]{--bg:#1b1613;--ink:#fff3e2;--muted:#c2b3a3;--card:#262019;--line:#3a3028}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.55;padding-bottom:5.5rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cheese);outline-offset:3px}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+ 
+/* hero: always dark */
+.hero{background:radial-gradient(60rem 30rem at 85% 20%,#3a1c10 0%,var(--char) 60%);color:var(--cream);padding:1.6rem 0 3.5rem;overflow:hidden}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.logo{font-family:var(--head);font-weight:800;font-size:1.5rem;letter-spacing:-.02em}
+.status{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,243,226,.1);border:1px solid rgba(255,243,226,.22);padding:.5rem 1rem;border-radius:999px;font-weight:700;font-size:.95rem}
+.dot{width:.7rem;height:.7rem;border-radius:50%;background:#9a9a9a;flex:none}
+.status.open .dot{background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.25)}
+.status.soon .dot{background:var(--cheese);box-shadow:0 0 0 4px rgba(255,194,51,.25)}
+.status.closed .dot{background:#ff6b5e}
+.heroGrid{display:grid;gap:1rem;align-items:center;margin-top:2.2rem;grid-template-columns:1fr}
+@media(min-width:820px){.heroGrid{grid-template-columns:1.15fr .85fr;gap:2rem}}
+h1{font-family:var(--head);font-weight:800;font-size:clamp(2.6rem,8.5vw,5.6rem);line-height:.96;letter-spacing:-.035em;margin:0 0 1.2rem}
+h1 em{font-style:normal;color:var(--ember)}
+.lead{font-size:1.2rem;max-width:30rem;margin:0 0 1.8rem;color:#ecdcc8}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:1rem 1.6rem;border-radius:999px;border:2px solid transparent;transition:transform .12s}
+.btn:hover{transform:translateY(-2px)}
+.btn.hot{background:var(--ember);color:#fff}
+.btn.line{border-color:rgba(255,243,226,.5);color:var(--cream)}
+.pizzaWrap{display:grid;place-items:center}
+.pizza{width:min(100%,26rem);height:auto;filter:drop-shadow(0 24px 40px rgba(0,0,0,.55));animation:spin 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes spin{from{transform:rotate(-70deg) scale(.85);opacity:0}to{transform:none;opacity:1}}
+ 
+/* sections */
+section{padding:3.4rem 0}
+h2{font-family:var(--head);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.05;margin:0 0 .6rem;letter-spacing:-.025em}
+.sub{margin:0 0 2rem;color:var(--muted);max-width:34rem}
+.cards{display:grid;gap:1.2rem;grid-template-columns:1fr}
+@media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1.5rem;padding:1.6rem;display:flex;flex-direction:column;gap:.6rem}
+.card .art{height:9.5rem;display:grid;place-items:center;background:var(--char);border-radius:1rem;margin-bottom:.6rem}
+.card .art svg{height:8rem;width:auto}
+.card h3{font-family:var(--head);font-size:1.5rem;margin:0}
+.card p{margin:0;color:var(--muted)}
+ 
+.info{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:820px){.info{grid-template-columns:1fr 1fr;gap:3rem}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:1.5rem;padding:1.6rem}
+.panel h3{font-family:var(--head);font-size:1.5rem;margin:0 0 .9rem}
+.panel table{width:100%;border-collapse:collapse}
+.panel td{padding:.55rem 0;border-bottom:1px solid var(--line)}
+.panel tr:last-child td{border-bottom:0}
+.panel td:last-child{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.panel tr.today td{color:var(--ember);font-weight:700}
+address{font-style:normal;font-size:1.2rem;line-height:1.5;margin:0 0 1.2rem}
+.panel .btns .btn.line{border-color:var(--ink);color:var(--ink)}
+ 
+.rev{background:var(--char);color:var(--cream)}
+.rating{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.rating b{font-family:var(--head);font-size:clamp(3.2rem,9vw,5.2rem);line-height:1;color:var(--cheese)}
+.quotes{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:700px){.quotes{grid-template-columns:1fr 1fr}}
+blockquote{margin:0;padding:1.4rem;background:rgba(255,243,226,.07);border-radius:1.2rem;font-size:1.2rem;font-weight:500}
+blockquote span{display:block;margin-top:.6rem;font-size:.9rem;color:#c9b9a6;font-weight:400}
+footer{padding:1.6rem 0 1.2rem;color:var(--muted);font-size:.92rem}
+ 
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px));background:var(--char);display:flex;gap:.7rem;justify-content:center;z-index:5;border-top:1px solid rgba(255,243,226,.15)}
+.callbar .btn{flex:1;max-width:22rem;text-align:center;padding:.9rem 1rem}
+@media (prefers-reduced-motion:reduce){.pizza{animation:none}.btn{transition:none}}
+.card .art.photo{padding:0;overflow:hidden;background:var(--char)}.card .art.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.revlink{display:inline-block;margin-top:1.4rem;color:var(--cheese);font-weight:700}
+.card .art{height:12rem;background:radial-gradient(circle at 50% 35%,#4a2314,#14110f 72%)}.card .art svg{height:10.8rem;width:auto}
+</style>
+</head>
+<body>
+ 
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <div class="logo">Attari’s</div>
+      <a class="status" href="tel:07596794030">Call 07596 794030</a>
+    </div>
+    <div class="heroGrid">
+      <div>
+        <h1>Doner kebabs &amp; pizza, <em>hot</em> on Washwood Heath Road.</h1>
+        <p class="lead">Walk in or call ahead for hot doner kebabs and loaded pizzas, right here in Ward End, Birmingham B8.</p>
+        <div class="btns">
+          <a class="btn hot" href="tel:07596794030">Call to order</a>
+          <a class="btn line" href="https://www.google.com/maps/dir/?api=1&destination=670+Washwood+Heath+Rd+Birmingham+B8+2HQ" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <div class="pizzaWrap" aria-hidden="true">
+        <svg class="pizza" viewBox="0 0 270 265">
+<defs>
+<radialGradient id="cr" cx=".5" cy=".5" r=".5"><stop offset=".86" stop-color="#e9a64c"/><stop offset="1" stop-color="#b3691f"/></radialGradient>
+<radialGradient id="ch" cx=".42" cy=".38" r=".75"><stop offset="0" stop-color="#ffe597"/><stop offset="1" stop-color="#eea00f"/></radialGradient>
+<clipPath id="main"><path clip-rule="evenodd" d="M-50 -50H320V320H-50Z M110 110L222.8 151L160.7 218.7Z"/></clipPath>
+<clipPath id="wedge"><path d="M110 110L222.8 151L160.7 218.7Z"/></clipPath>
+<g id="pz">
+<circle cx="110" cy="110" r="97" fill="url(#cr)"/>
+<circle cx="110" cy="110" r="85" fill="#c2371f"/>
+<circle cx="110" cy="110" r="81" fill="url(#ch)"/>
+<g fill="#d98410" fill-opacity=".4"><circle cx="78" cy="72" r="9"/><circle cx="140" cy="140" r="11"/><circle cx="165" cy="85" r="7"/><circle cx="70" cy="150" r="8"/><circle cx="118" cy="52" r="6"/></g>
+<g fill="#fff3b8" fill-opacity=".55"><circle cx="95" cy="95" r="7"/><circle cx="150" cy="110" r="6"/><circle cx="100" cy="140" r="8"/><circle cx="60" cy="100" r="5"/></g>
+<g fill="none" stroke="#3fae5a" stroke-width="5"><circle cx="76" cy="52" r="10"/><circle cx="152" cy="68" r="10"/><circle cx="58" cy="116" r="10"/><circle cx="118" cy="164" r="10"/><circle cx="165" cy="124" r="9"/><circle cx="108" cy="82" r="9"/></g>
+<g fill="none" stroke="#9fe3a0" stroke-width="1.5" stroke-opacity=".8"><circle cx="76" cy="52" r="10"/><circle cx="152" cy="68" r="10"/><circle cx="58" cy="116" r="10"/><circle cx="118" cy="164" r="10"/><circle cx="165" cy="124" r="9"/><circle cx="108" cy="82" r="9"/></g>
+<g fill="none" stroke="#a8478f" stroke-width="4.5" stroke-linecap="round"><path d="M95 118q16-10 30 2"/><path d="M130 94q14-8 24 4"/><path d="M60 78q8-14 22-12"/><path d="M80 140q14 12 30 4"/></g>
+<g fill="none" stroke="#d98ac5" stroke-width="1.4" stroke-linecap="round"><path d="M96 116q15-9 28 2"/><path d="M131 92q13-7 22 4"/><path d="M61 76q8-12 20-10"/><path d="M81 138q13 11 28 4"/></g>
+<g fill="#4f9f3a"><circle cx="112" cy="112" r="7"/><circle cx="90" cy="62" r="6"/><circle cx="145" cy="150" r="7"/><circle cx="70" cy="140" r="6"/><circle cx="170" cy="100" r="6"/></g>
+<g fill="#d7ec9e"><circle cx="112" cy="112" r="4.4"/><circle cx="90" cy="62" r="3.6"/><circle cx="145" cy="150" r="4.4"/><circle cx="70" cy="140" r="3.6"/><circle cx="170" cy="100" r="3.6"/></g>
+<g fill="#fff6c8"><circle cx="111" cy="111" r="1"/><circle cx="113" cy="113" r="1"/><circle cx="144" cy="149" r="1"/><circle cx="146" cy="151" r="1"/></g>
+</g>
+</defs>
+<g clip-path="url(#main)"><use href="#pz"/></g>
+<g transform="translate(36 26)"><g clip-path="url(#wedge)"><use href="#pz"/></g></g>
+</svg>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<main>
+  <section>
+    <div class="wrap">
+      <h2>On the menu</h2>
+      <p class="sub">Doner kebabs and pizzas, hot and ready. Ask in store or on the phone for the full menu and today’s prices.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="art" aria-hidden="true"><svg viewBox="34 30 92 130">
+<defs><linearGradient id="fo" x1="0" x2="1"><stop offset="0" stop-color="#d9d4c7"/><stop offset=".5" stop-color="#f7f3ea"/><stop offset="1" stop-color="#cfc9ba"/></linearGradient></defs>
+<ellipse cx="80" cy="152" rx="46" ry="6" fill="#000" fill-opacity=".35"/>
+<path d="M48 70L112 70L104 148Q80 158 56 148Z" fill="url(#fo)"/>
+<g stroke="#b9b2a0" stroke-width="1.5" fill="none"><path d="M60 84L100 84"/><path d="M58 104L102 104"/><path d="M57 124L103 124"/></g>
+<ellipse cx="80" cy="70" rx="34" ry="11" fill="#f1d49a"/>
+<path d="M50 66q8-14 18-6q6-16 20-4q12-10 20 4q8 0 4 10q-30 8-62 0z" fill="#79d94f"/>
+<g fill="#a2562a"><ellipse cx="66" cy="58" rx="13" ry="7"/><ellipse cx="92" cy="54" rx="14" ry="7"/><ellipse cx="80" cy="46" rx="12" ry="6"/></g>
+<g fill="#c8793c"><ellipse cx="62" cy="55" rx="7" ry="3"/><ellipse cx="89" cy="51" rx="8" ry="3"/><ellipse cx="78" cy="43" rx="6" ry="2.5"/></g>
+<circle cx="100" cy="62" r="7" fill="#e0452f"/><circle cx="100" cy="62" r="3" fill="#f48a7a"/>
+<path d="M58 62q8-8 16-2" fill="none" stroke="#a8478f" stroke-width="3" stroke-linecap="round"/>
+</svg></div>
+          <h3>Doner kebab</h3>
+          <p>Sliced doner meat, hot and ready to go.</p>
+        </article>
+        <article class="card">
+          <div class="art" aria-hidden="true"><svg viewBox="10 0 140 160">
+<defs><linearGradient id="sc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe597"/><stop offset="1" stop-color="#f0a818"/></linearGradient></defs>
+<ellipse cx="80" cy="154" rx="30" ry="5" fill="#000" fill-opacity=".35"/>
+<path d="M18 38Q80 8 142 38L80 150Z" fill="url(#sc)"/>
+<path d="M18 38Q80 8 142 38L134 52Q80 26 26 52Z" fill="#dc9040"/>
+<path d="M26 52Q80 26 134 52" fill="none" stroke="#b3691f" stroke-width="2" stroke-opacity=".6"/>
+<g fill="none" stroke="#3fae5a" stroke-width="5"><circle cx="58" cy="68" r="9"/><circle cx="102" cy="78" r="9"/><circle cx="80" cy="112" r="8"/></g>
+<g fill="none" stroke="#a8478f" stroke-width="4" stroke-linecap="round"><path d="M72 72q10-6 18 2"/><path d="M60 92q9 7 19 2"/></g>
+<g fill="#4f9f3a"><circle cx="86" cy="94" r="6"/><circle cx="46" cy="58" r="5"/><circle cx="116" cy="62" r="5"/></g>
+<g fill="#d7ec9e"><circle cx="86" cy="94" r="3.6"/><circle cx="46" cy="58" r="3"/><circle cx="116" cy="62" r="3"/></g>
+<path d="M74 150q6 8 12 0z" fill="#f0a818"/>
+</svg></div>
+          <h3>Loaded pizza</h3>
+          <p>Peppers, red onion and jalapeños on a hot, cheesy base.</p>
+        </article>
+        <article class="card">
+          <div class="art" aria-hidden="true"><svg viewBox="14 4 92 154">
+<ellipse cx="60" cy="154" rx="34" ry="5" fill="#000" fill-opacity=".35"/>
+<rect x="22" y="10" width="76" height="138" rx="12" fill="#fff3e2"/>
+<rect x="22" y="10" width="76" height="26" rx="12" fill="#ff5a1f"/>
+<g stroke="#ff5a1f" stroke-width="5" stroke-linecap="round"><path d="M36 58h48"/><path d="M36 80h48"/><path d="M36 102h32"/></g>
+<circle cx="82" cy="126" r="9" fill="#ffc233"/>
+</svg></div>
+          <h3>Full menu</h3>
+          <p>Call or pop in to see everything we serve and today’s prices.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="rev">
+    <div class="wrap">
+      <div class="rating"><b>4.6</b><span>out of 5 on Google, from local customers</span></div>
+      <div class="quotes">
+        <blockquote>“Excellent customer service.”<span>Google review</span></blockquote>
+        <blockquote>“Excellent experience.”<span>Google review</span></blockquote>
+      </div>
+      <a class="revlink" href="https://maps.google.com/?cid=3628545527905269072" target="_blank" rel="noopener">Read all reviews on Google</a>
+    </div>
+  </section>
+ 
+  <section>
+    <div class="wrap">
+      <div class="panel" style="max-width:36rem">
+        <h3>Find us</h3>
+        <address>Attari’s<br>670 Washwood Heath Road<br>Birmingham B8 2HQ</address>
+        <div class="btns">
+          <a class="btn hot" href="tel:07596794030">Call 07596 794030</a>
+          <a class="btn line" href="https://www.google.com/maps/dir/?api=1&destination=670+Washwood+Heath+Rd+Birmingham+B8+2HQ" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+ 
+<footer><div class="wrap">© <span id="yr">2026</span> Attari’s. 670 Washwood Heath Road, Birmingham B8 2HQ.</div></footer>
+ 
+<div class="callbar">
+  <a class="btn hot" href="tel:07596794030">Call to order</a>
+  <a class="btn line" style="color:var(--cream)" href="https://www.google.com/maps/dir/?api=1&destination=670+Washwood+Heath+Rd+Birmingham+B8+2HQ" target="_blank" rel="noopener">Directions</a>
+</div>
+ 
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>
+ 
